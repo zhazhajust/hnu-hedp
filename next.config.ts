@@ -32,8 +32,6 @@ const basePath = getBasePath();
 const nextConfig: NextConfig = {
   /* config options here */
   basePath: basePath,
-  assetPrefix: `${basePath}/`,
+  assetPrefix: '',
   output: 'export',
 };
-
-export default nextConfig;
