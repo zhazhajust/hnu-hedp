@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "serve out",
     "lint": "eslint",
     "export": "next build",
     "deploy": "next build && gh-pages -d out"
@@ -15,7 +15,8 @@
     "lucide-react": "*",
     "next": "16.0.4",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "serve": "^14.2.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
