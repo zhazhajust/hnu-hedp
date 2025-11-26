@@ -33,7 +33,10 @@ jobs:
         run: npm ci
 
       - name: Build with Next.js
-        run: npm run build
+        run: |
+          REPO_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+          echo "NEXT_PUBLIC_BASE_PATH=/$REPO_NAME" >> $GITHUB_ENV
+          npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
