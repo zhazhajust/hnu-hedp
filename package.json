@@ -8,10 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next build",
-    "deploy": "NEXT_PUBLIC_BASE_PATH=/hnu-hedp next build && gh-pages -d out"
+    "deploy": "next build && gh-pages -d out"
   },
-  "homepage": "https://zhazhajust.github.io/hnu-hedp",
   "dependencies": {
+    "http-server": "^14.1.1",
     "lucide-react": "*",
     "next": "16.0.4",
     "react": "19.2.0",
