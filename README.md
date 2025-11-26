@@ -29,8 +29,39 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy to GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured to deploy to GitHub Pages. There are two ways to deploy:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Method 1: GitHub Actions (Recommended)
+
+The project includes a GitHub Actions workflow that automatically deploys to GitHub Pages when you push to the `main` branch. The workflow is located at `.github/workflows/deploy.yml`.
+
+To enable GitHub Pages deployment:
+
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" in the left sidebar
+3. Under "Source", select "GitHub Actions"
+4. Push to the `main` branch to trigger the deployment
+
+### Method 2: Manual Deployment
+
+You can also deploy manually using the deploy script:
+
+```bash
+npm run deploy
+```
+
+Note: For manual deployment, you'll need to:
+1. Install the `gh-pages` package: `npm install gh-pages --save-dev`
+2. Make sure your GitHub repository is named `hnu-hedp`
+3. Update the `homepage` field in `package.json` with your GitHub username
+
+## Configuration Details
+
+The deployment configuration includes:
+
+- `basePath`: Set to `/hnu-hedp` for proper routing
+- `assetPrefix`: Set to `/hnu-hedp/` for static assets
+- `output`: Set to `export` for static HTML generation
+

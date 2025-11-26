@@ -6,8 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export": "next export",
+    "deploy": "next build && gh-pages -d out"
   },
+  "homepage": "https://caijie.github.io/hnu-hedp",
   "dependencies": {
     "lucide-react": "*",
     "next": "16.0.4",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.4",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
