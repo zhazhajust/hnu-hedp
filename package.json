@@ -9,7 +9,7 @@
     "start": "serve out",
     "lint": "eslint",
     "export": "next build",
-    "deploy": "GITHUB_PAGES=true next build && gh-pages -d out --nojekyll"
+    "deploy": "next build && gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "http-server": "^14.1.1",
