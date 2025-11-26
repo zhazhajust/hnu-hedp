@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "next export",
+    "export": "next build",
     "deploy": "next build && gh-pages -d out"
   },
-  "homepage": "https://caijie.github.io/hnu-hedp",
+  "homepage": "https://github.com/HNU-HEDP/HNU-HEDP.git",
   "dependencies": {
     "lucide-react": "*",
     "next": "16.0.4",
