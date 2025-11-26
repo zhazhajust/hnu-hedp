@@ -1,22 +1,12 @@
-/** @type {import('next').NextConfig} */
 import type { NextConfig } from "next";
 
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-let assetPrefix = "";
-let basePath = "";
-
-if (isGithubActions) {
-  // 去掉 `<owner>/`
-  const repo = process.env.GITHUB_REPOSITORY?.replace(/.*?\//, "") ?? "";
-
-  assetPrefix = `/${repo}/`;
-  basePath = `/${repo}`;
-}
+const isGithubPages = process.env.GITHUB_PAGES || process.env.GITHUB_ACTIONS || false;
+const repoName = "hnu-hedp";
 
 const nextConfig: NextConfig = {
-  basePath,
-  assetPrefix,
+  basePath: isGithubPages ? `/${repoName}` : "",
+  assetPrefix: isGithubPages ? `/${repoName}/` : "",
   output: "export",
 };
 
-module.exports = nextConfig;
+export default nextConfig;
