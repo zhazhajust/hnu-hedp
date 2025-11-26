@@ -10,7 +10,7 @@
     "export": "next build",
     "deploy": "next build && gh-pages -d out"
   },
-  "homepage": "https://github.com/HNU-HEDP/HNU-HEDP.git",
+  "homepage": "https://github.com/zhazhajust/hnu-hedp.git",
   "dependencies": {
     "lucide-react": "*",
     "next": "16.0.4",
